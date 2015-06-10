@@ -2,6 +2,12 @@
 
 A [Paw](http://luckymarmot.com/paw/) Extension that generates PHP code for the [WordPress HTTP API](https://codex.wordpress.org/HTTP_API).
 
+## Installation
+
+1. [Download the latest release](https://github.com/alleyinteractive/Paw-WordPressCodeGenerator/releases)
+2. Unzip com.alleyinteractive.PawExtensions.WordPressCodeGenerator.zip to your Paw Extensions directory (From Paw, go to the **Paw menu &rarr; Extensions &rarr; Open Extensions Directory**).
+3. If Paw hasn't already recognized it, you can go to **Paw menu &rarr; Extensions &rarr; Reload All Extensions**
+
 ## Development
 
 ### Build & Install
