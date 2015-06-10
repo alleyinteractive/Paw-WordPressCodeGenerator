@@ -1,12 +1,6 @@
-[![Build Status](https://travis-ci.org/alleyinteractive/Paw-WordPressCodeGenerator.svg?branch=master)](https://travis-ci.org/alleyinteractive/Paw-WordPressCodeGenerator)
-
 # WordPress Code Generator (Paw Extension)
 
 A [Paw](http://luckymarmot.com/paw/) Extension that generates PHP code for the [WordPress HTTP API](https://codex.wordpress.org/HTTP_API).
-
-## Installation
-
-
 
 ## Development
 
