@@ -4,7 +4,7 @@ A [Paw](http://luckymarmot.com/paw/) Extension that generates PHP code for the [
 
 ## Installation
 
-1. [Download the latest compiled source](https://github.com/alleyinteractive/Paw-WordPressCodeGenerator/releases/download/0.0.1/com.alleyinteractive.PawExtensions.WordPressCodeGenerator.zip)
+1. [Download the latest compiled source](https://github.com/alleyinteractive/Paw-WordPressCodeGenerator/releases/download/1.0.3/com.alleyinteractive.PawExtensions.WordPressCodeGenerator.zip)
 2. Unzip com.alleyinteractive.PawExtensions.WordPressCodeGenerator.zip to your Paw Extensions directory (From Paw, go to the **Paw menu &rarr; Extensions &rarr; Open Extensions Directory**).
 3. If Paw hasn't already recognized it, you can go to **Paw menu &rarr; Extensions &rarr; Reload All Extensions**
 
