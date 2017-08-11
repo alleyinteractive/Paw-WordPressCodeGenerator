@@ -12,61 +12,61 @@ $response = {{{method.function}}}( '{{{url.fullpath}}}' );
 {{#has_args}}
 $response = {{{method.function}}}( '{{{url.fullpath}}}'{{#has_args}}, array({{/has_args}}
 {{#method.needs_method}}
-	'method' => '{{{method.name}}}',
+    'method' => '{{{method.name}}}',
 {{/method.needs_method}}
 {{! ----- }}
 {{#headers.has_headers}}
-	'headers' => array(
+    'headers' => array(
 {{#body.has_raw_body}}
-		'Content-Type' => 'text/plain',
+        'Content-Type' => 'text/plain',
 {{/body.has_raw_body}}
 {{#body.has_json_body}}
-		'Content-Type' => 'application/json',
+        'Content-Type' => 'application/json',
 {{/body.has_json_body}}
 {{#headers.header_list}}
-		{{{header_name}}} => {{{header_value}}},
+        {{{header_name}}} => {{{header_value}}},
 {{/headers.header_list}}
-	),
+    ),
 {{/headers.has_headers}}
 {{! ----- }}
 {{#body.has_raw_body}}
-	'body' => {{{body.raw_body}}},
+    'body' => {{{body.raw_body}}},
 {{/body.has_raw_body}}
 {{! ----- }}
 {{#body.has_url_encoded_body}}
-	'body' => array(
+    'body' => array(
 {{#body.url_encoded_body}}
-		{{{name}}} => {{{value}}},
+        {{{name}}} => {{{value}}},
 {{/body.url_encoded_body}}
- 	),
+    ),
 {{/body.has_url_encoded_body}}
 {{! ----- }}
 {{#body.has_multipart_body}}
-	'body' => array(
+    'body' => array(
 {{#body.multipart_body}}
-		{{{name}}} => {{{value}}},
+        {{{name}}} => {{{value}}},
 {{/body.multipart_body}}
-	),
+    ),
 {{/body.has_multipart_body}}
 {{! ----- }}
 {{#body.has_json_body}}
-	'body' => $json,
+    'body' => $json,
 {{/body.has_json_body}}
 ) );
 {{/has_args}}
 
 if ( ! is_wp_error( $response ) ) {
-	// The request went through successfully, check the response code against
-	// what we're expecting
-	if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
-		// Do something with the response
-		// $body = wp_remote_retrieve_body( $response );
-		// $headers = wp_remote_retrieve_headers( $response );
-	} else {
-		// The response code was not what we were expecting, record the message
-		$error_message = wp_remote_retrieve_response_message( $response );
-	}
+    // The request went through successfully, check the response code against
+    // what we're expecting
+    if ( 200 == wp_remote_retrieve_response_code( $response ) ) {
+        // Do something with the response
+        // $body = wp_remote_retrieve_body( $response );
+        // $headers = wp_remote_retrieve_headers( $response );
+    } else {
+        // The response code was not what we were expecting, record the message
+        $error_message = wp_remote_retrieve_response_message( $response );
+    }
 } else {
-	// There was an error making the request
-	$error_message = $response->get_error_message();
+    // There was an error making the request
+    $error_message = $response->get_error_message();
 }
