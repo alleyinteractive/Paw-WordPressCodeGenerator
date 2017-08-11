@@ -12,7 +12,7 @@ build_dir = "#{ build_root_dir }/#{ identifier }"
 
 # compile CoffeeScript
 build_coffee = (callback) ->
-    coffee = spawn 'coffee', ['-c', '-o', build_dir, file]
+    coffee = spawn './node_modules/coffee-script/bin/coffee', ['-c', '-o', build_dir, file]
     coffee.stderr.on 'data', (data) ->
         process.stderr.write data.toString()
     coffee.stdout.on 'data', (data) ->
