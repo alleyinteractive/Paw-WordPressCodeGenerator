@@ -17,12 +17,6 @@ $response = {{{method.function}}}( '{{{url.fullpath}}}'{{#has_args}}, array({{/h
 {{! ----- }}
 {{#headers.has_headers}}
     'headers' => array(
-{{#body.has_raw_body}}
-        'Content-Type' => 'text/plain',
-{{/body.has_raw_body}}
-{{#body.has_json_body}}
-        'Content-Type' => 'application/json',
-{{/body.has_json_body}}
 {{#headers.header_list}}
         {{{header_name}}} => {{{header_value}}},
 {{/headers.header_list}}
